@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "WeatherProApplication"
 include ':app'
 include ':commons'
+include ':networks'

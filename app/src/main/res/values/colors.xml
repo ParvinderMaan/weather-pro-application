@@ -7,4 +7,28 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="white_light">#F9F9F9</color>
+    <color name="white_super_light">#F3F3F3</color>
+    <color name="red">#F30A0A</color>
+    <color name="green">#3DAD62</color>
+    <color name="grey">#9E9999</color>
+    <color name="grey_light">#DCDCDC</color>
+    <color name="yellow">#FFC31E</color>
+    <color name="purple">#886BCB</color>
+
+    <color name="white_honeydew">#E8FFE7</color>
+    <color name="white_magnolia">#F8ECFF</color>
+    <color name="white_ghost">#F1F1FF</color>
+    <color name="yellow_corn">#FFF5DD</color>
+    <color name="red_chablis">#FEE9E9</color>
+    <color name="blue_alice">#E8F7FF</color>
+
+    <color name="green_">#07BF4C</color>
+    <color name="purple_">#7900CA</color>
+    <color name="blue_">#0000B0</color>
+    <color name="yellow_">#F7B500</color>
+    <color name="red_">#D40606</color>
+    <color name="blue">#006996</color>
+<!--TODO remove unused color code before submitting-->
 </resources>

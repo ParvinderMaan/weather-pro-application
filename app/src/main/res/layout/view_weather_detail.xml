@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_search_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/white_light"
+            app:cardCornerRadius="@dimen/_16sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Space
+                    android:id="@+id/space_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_32sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_32ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_weather_icon"
+                    tools:text="19" />
+
+                <Space
+                    android:id="@+id/space_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_32sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_pressure_label" />
+
+                <TextView
+                    android:id="@+id/tv_feel_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_temperature"
+                    app:layout_constraintStart_toStartOf="@+id/tv_temperature"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_temperature"
+                    tools:text="feels like 32" />
+
+                <ImageView
+                    android:id="@+id/iv_weather_icon"
+                    android:layout_width="@dimen/_72sdp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/space_top"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+                <TextView
+                    android:id="@+id/tv_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_weather_icon"
+                    app:layout_constraintStart_toStartOf="@+id/iv_weather_icon"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_weather_icon"
+                    tools:text="Heavy Rain" />
+
+                <TextView
+                    android:id="@+id/tv_city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintStart_toStartOf="@+id/iv_weather_icon"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_main"
+                    tools:text="London" />
+
+                <TextView
+                    android:id="@+id/tv_pressure_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:text="@string/pressure"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_speed_label"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/space_middle" />
+
+                <TextView
+                    android:id="@+id/tv_speed_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:text="@string/speed"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_humidity_label"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_pressure_label"
+                    app:layout_constraintTop_toTopOf="@+id/tv_pressure_label"
+                    tools:text="Speed" />
+
+                <TextView
+                    android:id="@+id/tv_humidity_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:text="@string/humidity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_speed_label"
+                    app:layout_constraintTop_toTopOf="@+id/tv_pressure_label"
+                    tools:text="Humidity" />
+
+                <Space
+                    android:id="@+id/space_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_32sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_city_name" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_light"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_speed_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/space_middle" />
+
+                <TextView
+                    android:id="@+id/tv_pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_pressure_label"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="@+id/tv_pressure_label"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_pressure_label"
+                    tools:text="20" />
+
+
+                <TextView
+                    android:id="@+id/tv_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_speed_label"
+                    app:layout_constraintStart_toStartOf="@+id/tv_speed_label"
+                    app:layout_constraintTop_toTopOf="@+id/space_bottom"
+                    tools:text="30" />
+
+                <TextView
+                    android:id="@+id/tv_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_humidity_label"
+                    app:layout_constraintStart_toStartOf="@+id/tv_humidity_label"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_humidity_label"
+                    tools:text="50" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</merge>

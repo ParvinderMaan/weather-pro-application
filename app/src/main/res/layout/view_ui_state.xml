@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+    <!--    progress ui-->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    error ui-->
+    <ImageView
+        android:id="@+id/image_view_error"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@android:drawable/ic_btn_speak_now" />
+
+    <TextView
+        android:id="@+id/text_view_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Error message"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_error" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_error"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:minHeight="0dp"
+        android:paddingVertical="@dimen/_6sdp"
+        android:text="@string/try_again"
+        android:textAllCaps="false"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/_8sdp"
+        app:cornerRadius="@dimen/_6sdp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_error"
+        app:layout_constraintStart_toStartOf="@+id/text_view_error"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_error"
+        app:strokeColor="@color/purple"
+        app:strokeWidth="1dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_error"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="image_view_error,text_view_error,button_error"/>
+
+    <!--    empty ui-->
+    <TextView
+        android:id="@+id/text_view_no_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_error"
+        app:layout_constraintStart_toStartOf="@+id/image_view_error"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/no_content" />
+
+
+
+    <!--    content ui-->
+    <!-- is in root view-->
+
+
+
+</merge>

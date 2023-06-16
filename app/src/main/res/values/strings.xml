@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">WeatherProApplication</string>
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="weather_details">Weather Details</string>
+    <string name="try_again">Try Again</string>
+    <string name="no_content">No Content</string>
+    <string name="speed">Speed</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="check_the_weather_of_your_area">Check Here</string>
+    <string name="know_your_weather">Know your Weather</string>
+    <string name="denied_permission">Enable it manually by going to settings</string>
+    <string name="try_some_other_time">Try some other time</string>
 </resources>
